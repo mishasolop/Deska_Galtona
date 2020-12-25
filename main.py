@@ -14,8 +14,6 @@ import numpy as np
 
 import pylab
 
-import matplotlib.mlab as mlab
-
 fig, axes = plt.subplots(nrows=1, ncols=2, sharex=False, sharey=False, figsize=(20, 8))
 
 pylab.rc('font', family='sans', size=20)
