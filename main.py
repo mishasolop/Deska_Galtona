@@ -125,7 +125,7 @@ print("Dokładne prawdopodobieństwa: ", probysExact)
 
 residual = abs(probys - probysExact)
 
-print("Counts: ", histContents[0])
+print("Liczy: ", histContents[0])
 
 print("prawdopodobieństwo znalezienia kulki w {} z {} próbami:".format(-N, N), probs(N, 0))
 
