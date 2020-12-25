@@ -2,7 +2,7 @@
 # by Mykhailo Solop
 # Program wykorzystuje bibliotekę Matplotlib do zailustrowania działania Deski Galtona
 # i bibliotekę NumPY do wszelkich obliczeń.
-#v 0.1
+#v 0.1 25.12.20
 
 import matplotlib.pyplot as plt
 
