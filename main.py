@@ -95,7 +95,7 @@ for k in range(n_bins):
 
 probys = histContents[0] / totalContents
 
-print("Zasymulowane prawdopodonieństwa: ", probys)
+#print("Zasymulowane prawdopodonieństwa: ", probys)
 
 probyslist = []
 
@@ -121,17 +121,17 @@ while i <= N:
 
 probys = np.array(probyslist)
 
-print("Zasymulowane prawdopodobieństwa: ", probys)
+#print("Zasymulowane prawdopodobieństwa: ", probys)
 
 probysExact = np.array(probysExact)
 
-print("Dokładne prawdopodobieństwa: ", probysExact)
+#print("Dokładne prawdopodobieństwa: ", probysExact)
 
 residual = abs(probys - probysExact)
 
-print("Liczy: ", histContents[0])
+#print("Liczy: ", histContents[0])
 
-print("prawdopodobieństwo znalezienia kulki w {} z {} próbami:".format(-N, N), probs(N, 0))
+#print("prawdopodobieństwo znalezienia kulki w {} z {} próbami:".format(-N, N), probs(N, 0))
 
 Xrange = np.linspace(1, len(probys), num=len(probys))
 
