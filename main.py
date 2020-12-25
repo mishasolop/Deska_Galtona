@@ -1,8 +1,9 @@
-# Program na zaliczenie ćwiczeń z fizyki pod nazwą Deska Galtona
-# by Mykhailo Solop
+# Program na zaliczenie ćwiczeń z fizyki pod nazwą "Deska Galtona"
+# by Mykhailo Solop.
 # Program wykorzystuje bibliotekę Matplotlib do zailustrowania działania Deski Galtona
 # i bibliotekę NumPY do wszelkich obliczeń.
-#v 0.1 25.12.20
+# Warto zauważyć, że program przedstawia "idealną" Deskę Galtona, która nieco różni się od rzeczywistej.
+# v 0.1 25.12.20.
 
 import matplotlib.pyplot as plt
 
@@ -37,7 +38,7 @@ ax2 = axes[1]
 
 # funkcja do policzenia prawdopodobieństwa
 
-def probs(N, x):  # x must be x = -N, -N + 2, -N + 4, ... , N - 4, N - 2, N
+def probs(N, x):
 
     top = math.factorial(abs(N)) * 2 ** (-N)
 
@@ -48,7 +49,7 @@ def probs(N, x):  # x must be x = -N, -N + 2, -N + 4, ... , N - 4, N - 2, N
     return P
 
 
-N = 12  # liczba "schodków"
+N = 12  # liczba "schodków, warstw, kolumn..."
 
 n = 100000  # liczba kulek
 
@@ -65,7 +66,7 @@ x = np.zeros(n)
 
 for i in range(n):
 
-    start1 = 0
+    position = 0
 
     for j in range(N):
 
@@ -73,13 +74,13 @@ for i in range(n):
 
         if 0 < rand < p:
 
-            start1 = start1 - 1  # przesuń się w lewo
+            position = position - 1  # przesuń się w lewo
 
         elif p < rand < 1.0:
 
-            start1 = start1 + 1  # przesuń się w prawo
+            position = position + 1  # przesuń się w prawo
 
-    x[i] = start1
+    x[i] = position
 
 w = 1
 
@@ -94,7 +95,7 @@ for k in range(n_bins):
 
 probys = histContents[0] / totalContents
 
-print("simulated probabilities: ", probys)
+print("Zasymulowane prawdopodonieństwa: ", probys)
 
 probyslist = []
 
@@ -107,6 +108,9 @@ while i < len(probys):
     if probys[i] != 0.0: probyslist.append(probys[i])
 
     i = i + 1
+
+# wyliczamy dokładne prawdopodobieństwo
+
 
 i = -N
 
