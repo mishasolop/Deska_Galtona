@@ -101,6 +101,7 @@ probyslist = []
 
 probysExact = []
 
+
 i = 0
 
 while i < len(probys):
@@ -119,19 +120,12 @@ while i <= N:
 
     i = i + 2
 
-probys = np.array(probyslist)
 
-#print("Zasymulowane prawdopodobieństwa: ", probys)
+probys = np.array(probyslist)
 
 probysExact = np.array(probysExact)
 
-#print("Dokładne prawdopodobieństwa: ", probysExact)
-
 residual = abs(probys - probysExact)
-
-#print("Liczy: ", histContents[0])
-
-#print("prawdopodobieństwo znalezienia kulki w {} z {} próbami:".format(-N, N), probs(N, 0))
 
 Xrange = np.linspace(1, len(probys), num=len(probys))
 
